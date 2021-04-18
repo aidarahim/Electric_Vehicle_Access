@@ -1,12 +1,20 @@
-# function to generate ARIMA model and plot train, test, predictions
 import matplotlib.pyplot as plt
-def model_plot(train=None, test=None, arima_preds=None, title=None):
+def agg_income_plt(df, ytext = None, title = None,
+hor_lim = None, ver_lim = None, alpha=0.2):
+    fig = plt.figure(figsize=(5,8))
+    ax = plt.subplot(111)
+    # plot median income with vehicle resale instance
+    # plt.figure(figsize=(5,8))
+    plt.plot(df.index,df.iloc[:,:100],alpha=alpha)
 
-    plt.figure(figsize=(10,5))
-    plt.plot(train, label='Training data')
-    if test is not None:
-        plt.plot(test, label='Testing data')
-    plt.plot(arima_preds, '--', label='Testing preds',color='green')
-    plt.legend()
+    # plot median of all incomes, for trend
+    plt.plot(df.index,df.mean(axis=1),color='black',linestyle='-',marker='o',ms=10)
+    x = range(8)
+    plt.xticks(x, ['0','1','2','3','4','5','6','7'])
+    plt.xlabel('Resale number')
+    plt.ylabel(ytext)
     plt.title(title)
+    plt.xlim(hor_lim)
+    plt.ylim(ver_lim)
     plt.show()
+    fig.savefig('plot.png')

@@ -105,8 +105,9 @@ def my_map(latitude_wa, longitude_wa, zoom, circle_color, df, color_index=0):
 # function to plot calculated mean
 def agg_income_plt(df, ytext = None, title = None,
 hor_lim = None, ver_lim = None, alpha=0.2):
+    fig = plt.figure(figsize=(5,8))
+    ax = plt.subplot(111)
     # plot median income with vehicle resale instance
-    plt.figure(figsize=(5,8))
     plt.plot(df.index,df.iloc[:,:100],alpha=alpha)
 
     # plot median of all incomes, for trend
@@ -119,6 +120,7 @@ hor_lim = None, ver_lim = None, alpha=0.2):
     plt.xlim(hor_lim)
     plt.ylim(ver_lim)
     plt.show()
+    fig.savefig(f'../images/{title}.png')
 
 # Function to sort venues in descending order
 def return_most_common_venues(row, features, num_top_venues):

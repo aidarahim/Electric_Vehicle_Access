@@ -1,28 +1,30 @@
-# Electric Vehicles: Equitable Access
+# Electric Vehicles: Access and Opportunity
 
-## Executive Summary
-
-On April 16, 2021, The Washington state legislature [passed](https://www.autoweek.com/news/green-cars/a36146281/washington-to-ban-gas-cars/#:~:text=The%20Washington%20state%20legislature%20has,the%20exception%20of%20emergency%20vehicles.) the Clean Cars 2030 bill, which will require that by 2030, all new light-duty vehicles sold or registered in the state be electric, with the exception of emergency vehicles. The bill outlines a transition period and calls for a number of impact studies to be completed before 2030, including an analysis centered on "equity, especially including disadvantaged and low-income communities, communities of color, and rural communities, and strategies for maximizing equity in implementation of the 2030 requirement," among other research.
-
-In this work, we initiate a study that explores 3 areas:
-1. The relationship between electric vehicle ownership and economic means
-2. Access to charging facilities and the concept of 'garage orphan'
-3. Networking of charging stations and 'range anxiety'
-
-We find that 73% of electric vehicles (EVs) in WA state are owned in zipcodes with median income higher than the state median income. Growth in EV ownership the higher income zipcodes occurs at a faster rate as well. Over the last 10 years, 72% of housing permits in Seattle have been for non-single-family-housing, which is great for home ownership but underscores the need for equitable access to charging facilities across economic means. Large swathes of the state lack a well-connected charging station network, feeding into owners' range anxiety.
-
-<p style="text-align: center"><img src="./images/Seattle_stations.png" alt="Data Trends" style="width: 1000px;"/></p>
-
-<p style="text-align: center"><em>Charging stations in downtown Seattle, clustered by population and median income.</em></p>
+<p style="text-align: center"><img src="./images/html_maps_regs.gif"></p>
+<p style="text-align: center"><em>Electric vehicle registration in WA state from 2010 through 2021.</em></p>
 
 ## Introduction
-EV sales make up XX % of national vehicle EV_sales. EVs are attractive because...
-Chargers / charging station levels
+Electric vehicles made up only 2.6% of global car sales in 2019, but this constituted a whopping [40% year-on-year increase](https://www.iea.org/reports/global-ev-outlook-2020). Consumers are interested in the greatly reduced fueling costs, minimal parts and maintenance, reduced carbon emissions, and exhilarating acceleration and power. Rebates and incentives upon purchase or lease also result in cost-savings. The big 3 US automakers (GM, Ford, Chrysler) have all made announcements promising only zero-emission car sales by approximately [2035](https://www.nytimes.com/2021/01/29/business/general-motors-electric-cars.html), and a record number of almost 100 pure electric EV models is set to debut by the end of [2024](https://www.consumerreports.org/hybrids-evs/why-electric-cars-may-soon-flood-the-us-market/). The market is responding to demand, and so are lawmakers.
 
+On April 16, 2021, the Washington state legislature [passed](https://www.autoweek.com/news/green-cars/a36146281/washington-to-ban-gas-cars/#:~:text=The%20Washington%20state%20legislature%20has,the%20exception%20of%20emergency%20vehicles.) the Clean Cars 2030 bill, which will require that by 2030, all new light-duty vehicles sold or registered in the state be electric, with the exception of emergency vehicles. The bill outlines a transition period and calls for a number of impact studies to be completed before 2030, including an analysis centered on "equity, especially including disadvantaged and low-income communities, communities of color, and rural communities, and strategies for maximizing equity in implementation of the 2030 requirement," among other research.
 
+In this work, we initiate a study that explores 3 areas:
+1. The relationship between electric vehicle ownership and economic means:
 
-#### Problem statement
-How does electric vehicle ownership relate to markers of economic means?
+  *What is the difference in ownership growth rate and access to charging facilities between higher and lower income owners?*
+2. Access to charging facilities and the concept of 'garage orphan':
+
+  *What is the difference in availability of single-family vs multi-unit housing in Seattle?*
+
+3. Statewide network of charging stations:
+
+  *How much improvement in charging facilities is required to make long-distance drives more feasible for an EV?*
+
+We also discuss an opportunity for business owners.
+
+<p style="text-align: center"><img src="./images/Seattle_stations.png" alt="Data Trends" style="width: 500px;"/></p>
+
+<p style="text-align: center"><em>Charging stations in downtown Seattle, clustered by population and median income.</em></p>
 
 Sources:
 1. [Clean Cars 2030 passed by WA legislature](https://www.autoweek.com/news/green-cars/a36146281/washington-to-ban-gas-cars/#:~:text=The%20Washington%20state%20legislature%20has,the%20exception%20of%20emergency%20vehicles.)
@@ -33,15 +35,33 @@ Charging Infrastructure](http://www.seattle.gov/Documents/Departments/OSE/FINAL%
 4. [Seattle city household and family survey](https://www.census.gov/acs/www/data/data-tables-and-tools/narrative-profiles/2018/report.php?geotype=place&state=53&place=63000)
 5. [Update on electric vehicle costs in the US through 2030](https://theicct.org/sites/default/files/publications/EV_cost_2020_2030_20190401.pdf)
 
-## Data analysis
+## Data Description
+* EV Registration: records of title activity (transactions recording changes of ownership), and registration activity (transactions authorizing vehicles to be used on Washington public roads). Data includes transactions completed January 2010 through February 2021. [(Source)](https://data.wa.gov/Transportation/Electric-Vehicle-Title-and-Registration-Activity/rpr4-cgyd)
+* Population data: WA state population from 2019 [(source)](https://data.census.gov/cedsci/table?q=demographics&g=0400000US53,53.860000&tid=ACSDP5Y2019.DP05&hidePreview=true)
+* Income data: WA state median income from 2019 [(source)](https://data.census.gov/cedsci/table?q=income&g=0400000US53,53.860000&tid=ACSST5Y2019.S1903&hidePreview=true)
+* Representative profiles of time series charging data from public domain stations (in Palo Alto), a workplace (JPL in California), and some homes (in the MidWest).
+  1. Publicly accessible charging stations: [City of Palo Alto](https://data.cityofpaloalto.org/datasets/176684/electric-vehicle-charging-station-usage-fy-2011-fy-2017/)
+  2. Workplace charging data: ACN = [Adaptive Charging Network](https://ev.caltech.edu/info)
+  3. Charging at home: [NREL](https://data.nrel.gov/submissions/69)
+* Charging stations in WA extracted from charging stations in all of the US [(Source)](https://afdc.energy.gov/fuels/electricity_locations.html#/find/nearest?fuel=ELEC)
+
+Data dictionaries for each dataset are contained within the Data folder in the repo.
+
+## Data Analysis
 The following observations were gathered from analysis of data on EV ownership, charging cycles, geographical charging station distribution, housing permits, and WA state population and income:
 * EV registrations have been increasing over the last 10 years, though registrations for 2020 dropped down, presumably due to Covid-19
 * The rate of increase in battery electric vehicle (BEV) sales outpaces that of plugin-hybrid electric vehicle (PHEV) sales. In fact, the drop in overall EV sales in the past couple of years is due to a drop in PHEV EV_sales
-* The EV median price of \\$35,000 is ~1.5X the average price of a gas vehicle (\$21,000) [[source]](https://theicct.org/sites/default/files/publications/EV_cost_2020_2030_20190401.pdf)
+* The EV median price of \$35,000 is ~1.5X the [average price of a gas vehicle (\$21,000)](https://theicct.org/sites/default/files/publications/EV_cost_2020_2030_20190401.pdf)
 * 72.8% of EV registrations in WA state were carried out in zip codes with median income above the state median income
 * For both above- and below-median income groups, BEV ownership constitutes a higher percentage of total EV ownership
-* With each resale, the EV goes from higher to lower median income zipcodes, and from higher to lower sale price. This bodes well for increased accessibility (price-wise), because EVs generally have lower maintenance costs due to much fewer moving parts, though battery longevity issues will start to arise
-* Ownership growth is faster among owners in above-median zipcodes compared to below-median zipcodes, though ownership continues to grow there too. This is a promising trend
+* With each resale, the EV goes from higher to lower median income zipcodes, and from higher to lower sale price (figure below). This bodes well for increased accessibility (price-wise), because EVs generally have lower maintenance costs due to much fewer moving parts, though battery longevity issues will start to arise
+
+<p style="text-align: center"><img src="./images/Income_Price_Used.png" alt="Income_Price_Used" style="width: 500px;"/></p>
+
+<p style="text-align: center"><em>Income (left) and price (right) of used EVs.</em></p>
+
+
+* Ownership growth is 3 times faster among owners in above-median zipcodes compared to below-median zipcodes, though ownership continues to grow there too. This is a promising trend
 * From 3 datasets on charging cycles:
   * Charging at home occurs in the evening
   * Charging at work peaks in the morning only on weekdays
@@ -56,34 +76,32 @@ Time series models were used to forecast EV sales 15 years into the future, as w
 K-Means clustering was applied to household charging data as well as population and income data, as relates to EV charging station distribution. Clustering was also carried out using objective numerical measures of distance.
 
 ## Conclusions
+We find that 73% of electric vehicles (EVs) in WA state are owned in zipcodes with median income higher than the state median income. Growth in EV ownership the higher income zipcodes occurs at a rate 3X faster. There is not a strong relationship between charger density and median income (correlation of 0.14). The average charger density is 1.2 per 10k people, compared to Norway with [35 per 10k people](https://asia.nikkei.com/Spotlight/Datawatch/Japan-trails-Norway-and-France-in-EV-charging-stations-per-capita#:~:text=In%20Norway%2C%20where%2054%25%20of,35%20chargers%20per%2010%2C000%20people.). The highest density however is in the lower income zipcodes, which is promising. Over the last 10 years, 72% of housing permits in Seattle have been for non-single-family-housing, which is great for home ownership but underscores the need for equitable access to charging facilities across economic means. Large swathes of the state lack a well-connected charging station network, feeding into owners' range anxiety. The 300-mile distance from Seattle to Spokane would optimally have 10 charging station hubs, but currently only have 7.
 
 ## Recommendations
+1. Increase incentives relative to income (currently state tax exemptions)
+2. Legislate charging station requirements for housing developments
+3. Encourage businesses to install charging stations (incentives)
 
 ## APPENDIX
 
 ### 1. Repository Contents
 
-### 1.1. Jupyter notebooks
+### 1.1. Code
+#### A. Notebooks
+* 01 EV Ownership: explore the trends behind EV ownership in WA state
+* 02 EV Income: explore the relationship between EV ownership and median income as a marker of economic means
+* 03 EV Charging: explore charging behavior as well as access to home-based charging facilities
+* 04 EV Stations: look at how public charging stations are distributed geographically
 
-### 1.2. Data folder
+### 1.2. Data
+Contains original data files, modified data files, combined data files, data dictionaries, and saved models.
 
-### 2. Data Description
+#### B. Python scripts
+Python scripts contain custom functions and streamlit code.
 
-### 3. Software Requirements
+### 1.3. Images
+Figures for README and presentation.
 
-Electric vehicles are the future. Consumers are interested in the greatly reduced fueling costs, minimal parts and maintenance, reduced carbon emissions, and exhilirating acceleration and power. The US big 3 automakers are chasing Tesla's dominance in the EV space:
-
-Best of all, rebates and incentives save you money when you purchase or lease a new EV, helping make your transaction more affordable.
-* On Jan 20, 2021, General Motors announced that they aim to sell only zero-emission cars and trucks by [2035](https://www.nytimes.com/2021/01/29/business/general-motors-electric-cars.html)
-* Ford announced a \$29 billion investment in EVs and autonomous vehicles through 2025, with a statement that in the future, the majority of Ford vehicles will be electric, while traditional gasoline powertrains will be augmented with hybrid and plug-in hybrid [powertrains](https://www.caranddriver.com/news/a35432253/ford-ev-commitment-announced/)
-* Stellantis – the product of a $52 billion merger between automakers Fiat Chrysler and Groupe PSA – plans to offer an array of all-electric or hybrid vehicles through [2025](https://www.cnbc.com/2021/01/19/from-jeep-to-maserati-stellantis-to-rollout-10-new-ev-models-in-2021.html)
-* A record number of almost 100 pure electric EV models is set to debut by the end of [2024](https://www.consumerreports.org/hybrids-evs/why-electric-cars-may-soon-flood-the-us-market/)
-
-
-<img src="./Checkin 02/images/EV_sales.png" style="float: center">
-
-*Source*: [SeekingAlpha](https://seekingalpha.com/article/4410640-ev-company-news-for-month-of-february-2021)
-
-However, one of the most commonly cited barriers is the uncertainty associated with needing access to charging facilities for PEV drivers to plug in their vehicles (range anxiety). EV charging companies, towns and municipalities, individual businesses, local and federal government, are all interested in providing servies and capitalizing on this projected need. But how many and what kind of charging stations are needed? Where and how often do PEV drivers charge? The charging model for EVs is very dissimilar to that for fossil fuel vehicles, with charging time dependent on charger type and battery capacity. Therefore it's not as simple as adding EV charging stations to gas stations. The user's charging behavior will vary depending on where they live, where they work, and their travel patterns. Other than at home or at the workplace (primary and secondary charging locations), charging also occurs at individual charging stations at different parking lots. There are lots of logistical questions to answer, but what is clear is that publicly accessible EV charging infrastructure will need to be expanded.
-
-**In this project, I will develop a proposal for EV charging station distribution in WA state over time until 2030, based on historical and projected EV sales in WA and the current EV charging station distribution in WA.**
+### 2. Software Requirements
+The following python libraries are required to run the notebooks: numpy, pandas, re, pickle, seaborn, matplotlib, branca, folium, json, requests, datetime, time, pytz, geopy, scikit-learn, statsmodels, prophet. Also the custom library libfunctions contained in the Code folder.
