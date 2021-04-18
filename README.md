@@ -1,6 +1,6 @@
 # Electric Vehicles: Access and Opportunity
 
-<p style="text-align: center"><img src="./images/html_maps_regs.gif"></p>
+<p style="text-align: center"><img src="./Code/html_maps_regs.gif"></p>
 <p style="text-align: center"><em>Electric vehicle registration in WA state from 2010 through 2021.</em></p>
 
 ## Introduction
@@ -89,6 +89,8 @@ We find that 73% of electric vehicles (EVs) in WA state are owned in zipcodes wi
 
 ### 1.1. Code
 #### A. Notebooks
+Use ```github1s.com``` to view interactive folium maps in Jupyter notebooks. Just add ```1s``` after ```github``` and press Enter in the browser address bar.
+
 * 01 EV Ownership: explore the trends behind EV ownership in WA state
 * 02 EV Income: explore the relationship between EV ownership and median income as a marker of economic means
 * 03 EV Charging: explore charging behavior as well as access to home-based charging facilities
@@ -104,4 +106,4 @@ Python scripts contain custom functions and streamlit code.
 Figures for README and presentation.
 
 ### 2. Software Requirements
-The following python libraries are required to run the notebooks: numpy, pandas, re, pickle, seaborn, matplotlib, branca, folium, json, requests, datetime, time, pytz, geopy, scikit-learn, statsmodels, prophet. Also the custom library libfunctions contained in the Code folder.
+The following python libraries are required to run the notebooks: numpy, pandas, re, pickle, seaborn, matplotlib, branca, folium, json, requests, datetime, time, pytz, geopy, scikit-learn, statsmodels, prophet, IPython, selenium, time, os, PIL. Also the custom library libfunctions contained in the Code folder.
