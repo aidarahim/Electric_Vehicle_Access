@@ -12,6 +12,7 @@ In this work, we initiate a study that explores 3 areas:
 1. The relationship between electric vehicle ownership and economic means:
 
   *What is the difference in ownership growth rate and access to charging facilities between higher and lower income owners?*
+
 2. Access to charging facilities and the concept of 'garage orphan':
 
   *What is the difference in availability of single-family vs multi-unit housing in Seattle?*
