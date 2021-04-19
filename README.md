@@ -20,7 +20,7 @@ In this work, we initiate a study that explores 3 areas:
 
   *How much improvement in charging facilities is required to make long-distance drives more feasible for an EV?*
 
-We also discuss an opportunity for business owners.
+We also discuss an opportunity for business owners [(explore Streamlit app)](https://evstreamlit.herokuapp.com/).
 
 <p style="text-align: center"><img src="./images/Seattle_stations.png" alt="Data Trends" style="width: 500px;"/></p>
 
@@ -43,9 +43,10 @@ Charging Infrastructure](http://www.seattle.gov/Documents/Departments/OSE/FINAL%
   1. Publicly accessible charging stations: [City of Palo Alto](https://data.cityofpaloalto.org/datasets/176684/electric-vehicle-charging-station-usage-fy-2011-fy-2017/)
   2. Workplace charging data: ACN = [Adaptive Charging Network](https://ev.caltech.edu/info)
   3. Charging at home: [NREL](https://data.nrel.gov/submissions/69)
+* Housing permits: Seattle data [since 2010](https://data-seattlecitygis.opendata.arcgis.com/datasets/b15bb712fa0a4f4c9862a78e6d7da513_0?geometry=-122.945%2C47.534%2C-121.715%2C47.696)
 * Charging stations in WA extracted from charging stations in all of the US [(Source)](https://afdc.energy.gov/fuels/electricity_locations.html#/find/nearest?fuel=ELEC)
 
-Data dictionaries for each dataset are contained within the Data folder in the repo.
+Data dictionaries for each dataset are referenced from the original data sites.
 
 ## Data Analysis
 The following observations were gathered from analysis of data on EV ownership, charging cycles, geographical charging station distribution, housing permits, and WA state population and income:
@@ -54,14 +55,13 @@ The following observations were gathered from analysis of data on EV ownership, 
 * The EV median price of \$35,000 is ~1.5X the [average price of a gas vehicle (\$21,000)](https://theicct.org/sites/default/files/publications/EV_cost_2020_2030_20190401.pdf)
 * 72.8% of EV registrations in WA state were carried out in zip codes with median income above the state median income
 * For both above- and below-median income groups, BEV ownership constitutes a higher percentage of total EV ownership
+* Ownership growth is 3 times faster among owners in above-median zipcodes compared to below-median zipcodes, though ownership continues to grow there too. This is a promising trend
 * With each resale, the EV goes from higher to lower median income zipcodes, and from higher to lower sale price (figure below). This bodes well for increased accessibility (price-wise), because EVs generally have lower maintenance costs due to much fewer moving parts, though battery longevity issues will start to arise
 
 <p style="text-align: center"><img src="./images/Income_Price_Used.png" alt="Income_Price_Used" style="width: 500px;"/></p>
 
 <p style="text-align: center"><em>Income (left) and price (right) of used EVs.</em></p>
 
-
-* Ownership growth is 3 times faster among owners in above-median zipcodes compared to below-median zipcodes, though ownership continues to grow there too. This is a promising trend
 * From 3 datasets on charging cycles:
   * Charging at home occurs in the evening
   * Charging at work peaks in the morning only on weekdays
@@ -79,9 +79,9 @@ K-Means clustering was applied to household charging data as well as population 
 We find that 73% of electric vehicles (EVs) in WA state are owned in zipcodes with median income higher than the state median income. Growth in EV ownership the higher income zipcodes occurs at a rate 3X faster. There is not a strong relationship between charger density and median income (correlation of 0.14). The average charger density is 1.2 per 10k people, compared to Norway with [35 per 10k people](https://asia.nikkei.com/Spotlight/Datawatch/Japan-trails-Norway-and-France-in-EV-charging-stations-per-capita#:~:text=In%20Norway%2C%20where%2054%25%20of,35%20chargers%20per%2010%2C000%20people.). The highest density however is in the lower income zipcodes, which is promising. Over the last 10 years, 72% of housing permits in Seattle have been for non-single-family-housing, which is great for home ownership but underscores the need for equitable access to charging facilities across economic means. Large swathes of the state lack a well-connected charging station network, feeding into owners' range anxiety. The 300-mile distance from Seattle to Spokane would optimally have 10 charging station hubs, but currently only have 7.
 
 ## Recommendations
-1. Increase incentives relative to income (currently state tax exemptions)
-2. Legislate charging station requirements for housing developments
-3. Encourage businesses to install charging stations (incentives)
+1. Increase incentives relative to income (currently state tax exemptions).
+2. Legislate charging station requirements for housing developments.
+3. Encourage businesses to install charging stations (incentives). Use the [custom app](https://evstreamlit.herokuapp.com/) to evaluate availability of nearby stations.
 
 ## APPENDIX
 
@@ -97,7 +97,7 @@ Use ```github1s.com``` to view interactive folium maps in Jupyter notebooks. Jus
 * 04 EV Stations: look at how public charging stations are distributed geographically
 
 ### 1.2. Data
-Contains original data files, modified data files, combined data files, data dictionaries, and saved models.
+Contains original data files, modified data files, combined data files, and saved models.
 
 #### B. Python scripts
 Python scripts contain custom functions and streamlit code.

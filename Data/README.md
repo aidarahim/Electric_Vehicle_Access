@@ -1,6 +1,15 @@
-Use ```github1s.com``` to view interactive folium maps in Jupyter notebooks. Just add ```1s``` after ```github``` and press Enter in the browser address bar.
+#### Data dictionaries for the data used in this project are listed below, but can also be accessed from the original data sites.
 
-# Data dictionaries for the data used in this project
+## Data Description
+* EV Registration: records of title activity (transactions recording changes of ownership), and registration activity (transactions authorizing vehicles to be used on Washington public roads). Data includes transactions completed January 2010 through February 2021. [(Source)](https://data.wa.gov/Transportation/Electric-Vehicle-Title-and-Registration-Activity/rpr4-cgyd)
+* Population data: WA state population from 2019 [(source)](https://data.census.gov/cedsci/table?q=demographics&g=0400000US53,53.860000&tid=ACSDP5Y2019.DP05&hidePreview=true)
+* Income data: WA state median income from 2019 [(source)](https://data.census.gov/cedsci/table?q=income&g=0400000US53,53.860000&tid=ACSST5Y2019.S1903&hidePreview=true)
+* Representative profiles of time series charging data from public domain stations (in Palo Alto), a workplace (JPL in California), and some homes (in the MidWest).
+  1. Publicly accessible charging stations: [City of Palo Alto](https://data.cityofpaloalto.org/datasets/176684/electric-vehicle-charging-station-usage-fy-2011-fy-2017/)
+  2. Workplace charging data: ACN = [Adaptive Charging Network](https://ev.caltech.edu/info)
+  3. Charging at home: [NREL](https://data.nrel.gov/submissions/69)
+* Housing permits: Seattle data [since 2010](https://data-seattlecitygis.opendata.arcgis.com/datasets/b15bb712fa0a4f4c9862a78e6d7da513_0?geometry=-122.945%2C47.534%2C-121.715%2C47.696)
+* Charging stations in WA extracted from charging stations in all of the US [(Source)](https://afdc.energy.gov/fuels/electricity_locations.html#/find/nearest?fuel=ELEC)
 
 ## EVs Registered in WA state
 [*Dictionary Source*](https://data.wa.gov/Transportation/Electric-Vehicle-Population-Data/f6w7-q2d2)
